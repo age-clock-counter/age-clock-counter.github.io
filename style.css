@@ -161,17 +161,18 @@ h1.this-sec, h1.next-sec {
     position: absolute;
     left: 50%;
     bottom: 50%; /* تنطلق من المركز */
-    width: calc((var(--clock-size) / 250) * 1px);
-    height: calc((var(--clock-size) / 33.3) * 1px);
+    width: calc((var(--clock-size) / 160) * 1px);
+    height: calc((var(--clock-size) / 25) * 1px);
     background: #ffffff;
     transform-origin: bottom center;
     transform: rotate(calc(var(--i) * 6deg)) translateY(calc((var(--clock-size) / 2) * 1px + 5px));
     z-index: 0;
+    border-radius: 500px;
 }
 
 .tick.big {
-    width: calc((var(--clock-size) / 166.667) * 1px);
-    height: calc((var(--clock-size) / 25) * 1px);
+    width: calc((var(--clock-size) / 100) * 1px);
+    height: calc((var(--clock-size) / 20) * 1px);
     transform: rotate(calc(var(--i) * 6deg)) translateY(calc((var(--clock-size) / 2) * 1px + 5px));
     background: #00ddff;
 }
@@ -187,6 +188,7 @@ h1.this-sec, h1.next-sec {
     z-index: 0;
 }
 
+
 /* الشاشات */
 @media (max-width: 500px) {
     :root {
@@ -194,7 +196,7 @@ h1.this-sec, h1.next-sec {
     }
 
     h1.today, h1.this-sec, h1.next-sec {
-        font-size: 17px;
+        font-size: 15px;
     }
 
     .tick {
@@ -208,7 +210,7 @@ h1.this-sec, h1.next-sec {
     }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 400px) {
     :root {
         --clock-size: 250;
     }
