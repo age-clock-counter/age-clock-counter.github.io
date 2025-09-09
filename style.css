@@ -121,6 +121,7 @@ h1.this-sec, h1.next-sec {
 .toggles {
     display: flex;
     margin-top: 50px;
+    filter: drop-shadow(0 0 12px #00d9ff);
 }
 
 .toggle-btn {
@@ -193,7 +194,17 @@ h1.this-sec, h1.next-sec {
     }
 
     h1.today, h1.this-sec, h1.next-sec {
-        font-size: 15px;
+        font-size: 17px;
+    }
+
+    .tick {
+        width: calc((var(--clock-size) / 120) * 1px);
+        height: calc((var(--clock-size) / 20) * 1px);
+    }
+    
+    .tick.big {
+        width: calc((var(--clock-size) / 100) * 1px);
+        height: calc((var(--clock-size) / 15) * 1px);
     }
 }
 
