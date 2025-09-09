@@ -43,8 +43,8 @@ function clockTick() {
     const nextSecondStart = new Date(currentSecondStart.getTime() + secondLengthMs);
 
     todayEl.textContent = "اليوم الحالي: " + toHijri(now);
-    thisSecEl.textContent = "الثانية الحالية: " + toHijri(currentSecondStart);
-    nextSecEl.textContent = "الثانية التالية: " + toHijri(nextSecondStart);
+    thisSecEl.textContent = "بداية الثانية الحالية: " + toHijri(currentSecondStart);
+    nextSecEl.textContent = "بداية الثانية التالية: " + toHijri(nextSecondStart);
 
     // ---- دوران العقارب ----
     let seconds = secondSmooth
