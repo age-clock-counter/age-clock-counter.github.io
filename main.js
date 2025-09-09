@@ -6,6 +6,8 @@ const todayEl = document.querySelector('.today');
 const thisSecEl = document.querySelector('.this-sec');
 const nextSecEl = document.querySelector('.next-sec');
 
+const elapsedEl = document.querySelector('.elapsed-time');
+
 const startDate = new Date("2007-12-15T00:00:00");
 
 let hourSmooth = false;
@@ -45,6 +47,8 @@ function clockTick() {
     todayEl.textContent = "اليوم الحالي: " + toHijri(now);
     thisSecEl.textContent = "بداية الثانية الحالية: " + toHijri(currentSecondStart);
     nextSecEl.textContent = "بداية الثانية التالية: " + toHijri(nextSecondStart);
+
+    elapsedEl.textContent = `${minutesInt}:${secondsInt}.${Math.floor((secondsPrecise-secondsInt)*1000)}`;
 
     // ---- دوران العقارب ----
     let seconds = secondSmooth

@@ -175,6 +175,17 @@ h1.this-sec, h1.next-sec {
     background: #00ddff;
 }
 
+/* عدى كم */
+.elapsed-time {
+    position: relative;
+    top: calc(1 * ((var(--clock-size) / 7) * 1px));
+    color: #00d9ff;
+    text-shadow: 0 0 12px #00d9ff;
+    font-size: calc((var(--clock-size) / 12) * 1px + 5px);
+    text-align: center;
+    z-index: 0;
+}
+
 /* الشاشات */
 @media (max-width: 500px) {
     :root {
