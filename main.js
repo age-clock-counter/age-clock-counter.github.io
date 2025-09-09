@@ -14,15 +14,33 @@ let hourSmooth = false;
 let minuteSmooth = false;
 let secondSmooth = false;
 
-function toHijri(date) {
-    return new Intl.DateTimeFormat("ar-SA-u-ca-islamic", {
-        day: "numeric",
-        month: "long",
-        year: "numeric",
-        hour: "numeric",
-        minute: "numeric",
-        second: "numeric"
-    }).format(date);
+function toHijri(date, isDay = true) {
+    if (isDay) {
+        let theDay = getWeekday(date);
+        let theDate = new Intl.DateTimeFormat("ar-SA-u-ca-islamic", {
+            day: "numeric",
+            month: "long",
+            year: "numeric",
+            hour: "numeric",
+            minute: "numeric",
+            second: "numeric"
+        }).format(date);
+
+        return theDay + " " + theDate;
+    } else {
+        return new Intl.DateTimeFormat("ar-SA-u-ca-islamic", {
+            day: "numeric",
+            month: "long",
+            year: "numeric",
+            hour: "numeric",
+            minute: "numeric",
+            second: "numeric"
+        }).format(date);
+    }
+}
+
+function getWeekday(date) {
+    return new Intl.DateTimeFormat("ar-SA", { weekday: "long" }).format(date);
 }
 
 function clockTick() {
