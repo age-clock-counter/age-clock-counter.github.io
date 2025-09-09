@@ -174,3 +174,24 @@ h1.this-sec, h1.next-sec {
     transform: rotate(calc(var(--i) * 6deg)) translateY(calc((var(--clock-size) / 2) * 1px + 5px));
     background: #00ddff;
 }
+
+/* الشاشات */
+@media (max-width: 500px) {
+    :root {
+        --clock-size: 300;
+    }
+
+    h1.today, h1.this-sec, h1.next-sec {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 360px) {
+    :root {
+        --clock-size: 250;
+    }
+
+    h1.today, h1.this-sec, h1.next-sec {
+        font-size: 13px;
+    }
+}
