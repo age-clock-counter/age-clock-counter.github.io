@@ -113,7 +113,7 @@ h1.today, h1.this-sec, h1.next-sec {
     font-size: 20px;
 }
 
-h1.this-sec, h1.next-sec {
+h1.today, h1.next-sec {
     margin-top: 20px;
 }
 
@@ -219,3 +219,4 @@ h1.this-sec, h1.next-sec {
         font-size: 13px;
     }
 }
+
